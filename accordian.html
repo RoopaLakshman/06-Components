@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordian component</title>
+    <style>
+
+      /*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+      }
+
+      .accordian {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        margin: 100px auto;
+      }
+
+      .accordian-item {
+        box-shadow: 0 0 32px rgba(183, 185, 188, 0.738);
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .answer-component {
+        grid-column: 2;
+        display: none;
+      }
+
+      .sl-no, .question  {
+        font-weight: 500;
+        font-size: 24px;
+      }
+
+      .sl-no {
+        color: #ced4da;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+        stroke-width: 3;
+      }
+
+      .answer-component p {
+        margin-bottom: 20px;
+      }
+
+      .answer-component ul {
+        color: #76808a;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 18px;
+      }
+
+      .accordian-open-item {
+        border-top: 4px solid #087f5b;
+      }
+
+      .accordian-open-item .sl-no,
+      .accordian-open-item .question{
+          color: #087f5b;
+      }
+
+      .accordian-open-item .answer-component {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="accordian">
+      <div class="accordian-item">
+          <span class="sl-no">01</span>
+          <span class="question">Where are these chairs assembled?</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+          <div class="answer-component">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              consequatur similique debitis laudantium nulla fugit non id veniam
+              dicta fugiat vitae perferendis rem eius nostrum vero delectus alias,
+              provident voluptatem!
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li>Fugiat suscipit iusto, enim dicta consequuntur temporibus error! </li>
+                <li>Velit, cumque ducimus, sit fuga expedita eaque eligendi atque harum ratione fugit veritatis impedit.</li>
+                <li>Hji dicta fugiat vitae perferendis rem eius nostrum vero dele</li>
+              </ul>
+            </p>
+        </div>
+      </div>
+
+      <div class="accordian-item accordian-open-item">
+          <span class="sl-no">02</span>
+          <span class="question">How long do I have to return my chair?</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        <div class="answer-component">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            consequatur similique debitis laudantium nulla fugit non id veniam
+            dicta fugiat vitae perferendis rem eius nostrum vero delectus alias,
+            provident voluptatem!
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              <li>Fugiat suscipit iusto, enim dicta consequuntur temporibus error! </li>
+              <li>Velit, cumque ducimus, sit fuga expedita eaque eligendi atque harum ratione fugit veritatis impedit.</li>
+              <li>Hji dicta fugiat vitae perferendis rem eius nostrum vero dele</li>
+            </ul>
+          </p>
+      </div>
+      </div>
+      <div class="accordian-item">
+          <span class="sl-no">03</span>
+          <span class="question">Do you ship to countries outside EU?</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+          <div class="answer-component">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              consequatur similique debitis laudantium nulla fugit non id veniam
+              dicta fugiat vitae perferendis rem eius nostrum vero delectus alias,
+              provident voluptatem!            
+            </p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li>Fugiat suscipit iusto, enim dicta consequuntur temporibus error! </li>
+                <li>Velit, cumque ducimus, sit fuga expedita eaque eligendi atque harum</li>
+                <li>Hji dicta fugiat vitae perferendis rem eius nostrum vero dele</li>
+              </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
